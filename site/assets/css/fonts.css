@@ -1,0 +1,65 @@
+@font-face {
+	font-family: droid-sans;
+	src: url('../fonts/DroidSans.ttf');
+}
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-ssjdyw');
+	src:url('../fonts/icomoon.eot?#iefix-ssjdyw') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-ssjdyw') format('woff'),
+		url('../fonts/icomoon.ttf?-ssjdyw') format('truetype'),
+		url('../fonts/icomoon.svg?-ssjdyw#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon_android:before {
+	content: "\e600";
+}
+.icon-icon_axe:before {
+	content: "\e601";
+}
+.icon-icon_ios:before {
+	content: "\e602";
+}
+.icon-icon_location:before {
+	content: "\e603";
+}
+.icon-icon_mail:before {
+	content: "\e604";
+}
+.icon-icon_menu:before {
+	content: "\e605";
+}
+.icon-icon_phone:before {
+	content: "\e606";
+}
+.icon-icon_qq:before {
+	content: "\e607";
+}
+.icon-icon_qr:before {
+	content: "\e608";
+}
+.icon-icon_route:before {
+	content: "\e609";
+}
+.icon-icon_search:before {
+	content: "\e60a";
+}
+.icon-icon_weibo:before {
+	content: "\e60b";
+}

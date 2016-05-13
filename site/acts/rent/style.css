@@ -1,0 +1,202 @@
+/*global*/
+body {
+    line-height: 1.6em;
+    background: #262a32;
+    font-family: 'microsoft yahei','stheiti',sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/*character*/
+.scene {
+    min-height: 35em;
+    padding: 1px 0;
+}
+.zhang {
+    background: #93384a;
+}
+.wang {
+    background: #7d706e;
+}
+.li {
+    background: #ebedf7;
+}
+.scene .character {
+    width: 100%;
+    height: 360px;
+    margin: 2em 0 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 320px 360px;
+    text-indent: -500em;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    animation: zoomin 0.3s ease-out;
+    -webkit-animation: zoomin 0.3s ease-out;
+}
+.zhang .character {
+    background-image: url(images/zhang.png);
+}
+.wang .character {
+    background-image: url(images/wang.png);
+}
+.li .character {
+    background-image: url(images/li.png);
+}
+.scene p {
+    width: 14em;
+    margin: 0 auto 5em;
+    opacity: 0;
+    transform: translate(0, 2em);
+    -webkit-transform: translate(0, 2em);
+    animation: fadein_up 0.3s ease-out 0.5s both;
+    -webkit-animation: fadein_up 0.3s ease-out 0.5s both;
+}
+.zhang p {
+    color: #f1d7dc;
+}
+.wang p {
+    color: #ead6d4;
+}
+.li p {
+    color: #646b90;
+}
+
+
+/*download*/
+.download {
+    padding: 0 0 3em;
+    transition: transform 1s cubic-bezier(0.52, 0.07, 0.92, 0.12), opacity 1s cubic-bezier(0.52, 0.07, 0.92, 0.12);
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.52, 0.07, 0.92, 0.12), opacity 1s cubic-bezier(0.52, 0.07, 0.92, 0.12);
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+.show {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+.download .phone {
+    width: 100%;
+    height: 400px;
+    background: url(images/iphone.png) no-repeat center center;
+    background-size: 320px 400px;
+}
+.download p {
+    width: 10em;
+    margin: 1em auto 2.5em;
+    color: #95a3bf;
+}
+.download a {
+    display: block;
+    width: 16em;
+    height: 7.5em;
+    overflow: hidden;
+    margin: auto;
+    background: #2093ce;
+    border-radius: 0.3em;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.download a:after {
+    content: "";
+    display: block;
+    width: 120%;
+    height: 100%;
+    background: #1587c2;
+    position: absolute;
+    left: 0;
+    top: 3.5em;
+    z-index: 2;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+}
+.download a h2 {
+    display: block;
+    height: 30px;
+    margin: 1em 0 0.5em;
+    background: url(images/arrow.png) no-repeat center center;
+    background-size: 30px 30px;
+    position: relative;
+    z-index: 3;
+}
+.download a span {
+    display: block;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 3;
+}
+.download a em {
+    display: block;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 3;
+}
+.download a .light {
+    width: 120%;
+    position: absolute;
+    left: -15em;
+    top: 3.5em;
+    z-index: 5;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform: rotate(-70deg);
+    -webkit-transform: rotate(-70deg);
+    animation: light 3s ease-out infinite;
+    -webkit-animation: light 3s ease-out infinite;
+}
+.download a .light i {
+    display: block;
+    width: 100%;
+    height: 3em;
+    margin: 1em 0;
+    background: #fff;
+    opacity: 0.05;
+}
+
+
+/*animations*/
+@keyframes zoomin {
+    0% { transform: scale(0); }
+    95% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+@-webkit-keyframes zoomin {
+    0% { -webkit-transform: scale(0); }
+    95% { -webkit-transform: scale(1.05); }
+    100% { -webkit-transform: scale(1); }
+}
+@keyframes fadein_up {
+    0% { transform: translate(0, 2em); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+}
+@-webkit-keyframes fadein_up {
+    0% { -webkit-transform: translate(0, 2em); opacity: 0; }
+    100% { -webkit-transform: translate(0, 0); opacity: 1; }
+}
+@keyframes light {
+    0% { left: -15em; }
+    80% { left: -15em; }
+    100% { left: 10em; }
+}
+@-webkit-keyframes light {
+    0% { left: -15em; }
+    80% { left: -15em; }
+    100% { left: 10em; }
+}
+
+
+/*plugin*/
+.statistic {
+    display: none;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no" />
+<title>下载易停车</title>
+<style type="text/css">
+/* reset */
+* { margin:0; padding:0; }
+a img { border:none; }
+ol, ul { list-style:none; }
+button, input[type="submit"], input[type="button"], input[type="reset"] { cursor:pointer; }
+input[type=button], input[type=submit]{ -webkit-appearance:none; outline:none; }
+article,aside,dialog,footer,header,section,footer,nav,figure,menu { display:block; }
+table { width:100%; border-collapse:collapse; border-spacing:0; }
+a { text-decoration:none; outline:none; }
+body { line-height:1.6; }
+.clear { clear:both; display:block; height:0px; overflow:hidden; }
+.clearfix { zoom:1; }
+.clearfix:after { clear:both; display:block; height:0; content:"."; visibility:hidden; }
+
+/* layout */
+body { background:#eee; font-family:'microsoft yahei','stheiti',sans-serif; font-size:1em; color:#333;
+    animation: movein_left .3s ease-in;
+    -webkit-animation: movein_left .3s ease-in;
+    -moz-animation: movein_left .3s ease-in;
+}
+input, textarea { font-family:'microsoft yahei','stheiti',sans-serif; }
+::selection { background:#2b97e8; color:#fff; }
+::-moz-selection { background:#2b97e8; color:#fff; } 
+
+/* page */
+.tip { height: 40px; line-height: 40px; padding: 0 50px 0 0; background: #2093ce; font-size: 0.8em; color: #fff; text-align: right; position: relative; }
+.tip:after { content: "."; display: block; width: 17px; height: 17px; background: url(yitingche_down_bg@2x.png) no-repeat -87px -97px; background-size: 105px 120px; text-align: left; text-indent: -9999px; position: absolute; right: 25px; top: 8px; }
+.header { width: 60px; height: 88px; margin: 50px auto 15px; background: url(yitingche_down_bg@2x.png) no-repeat left top; background-size: 105px 120px; }
+.container { margin: auto; padding: 30px 0; }
+.container p { line-height: 22px; margin: 0 0 15px; font-size: 1em; text-align: center; }
+.container .downloads { text-align: center; }
+.container .downloads a { display: inline-block; width: 130px; height: 40px; line-height: 40px; margin: 0 3px; background-color: #333; background-image: url(yitingche_down_bg@2x.png); background-repeat: no-repeat; background-size: 105px 120px; border-radius: 3px; color: #fff; font-size: 0.8em; text-indent: 55px; font-family: 'arial','sans-serif'; text-align: left; }
+.down_iphone { background-position: -65px 2px; }
+.down_android { background-position: -65px -48px; }
+.footer { padding: 25px 0 0; color: #aaa; text-align: center; font-size: 0.8em; }
+.statistic { display: none; }
+
+/* animations */
+@keyframes movein_left {
+    0% { opacity:0; transform:translate(-30px,0px); }
+    100% { opacity:1; transform:translate(0px,0px); }
+}
+@-webkit-keyframes movein_left {
+    0% { opacity:0; -webkit-transform:translate(-30px,0px); }
+    100% { opacity:1; -webkit-transform:translate(0px,0px); }
+}
+@-moz-keyframes movein_left {
+    0% { opacity:0; -moz-transform:translate(-30px,0px); }
+    100% { opacity:1; -moz-transform:translate(0px,0px); }
+}
+</style>
+<script type="text/javascript">
+    // // 获取终端的相关信息
+    // var Terminal = {
+    //     // 辨别移动终端类型
+    //     platform : function(){
+    //         var u = navigator.userAgent, app = navigator.appVersion;
+    //         return {
+    //             // android终端或者uc浏览器
+    //             android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+    //             // 是否为iPhone或者QQHD浏览器
+    //             iPhone: u.indexOf('iPhone') > -1 ,
+    //             // 是否iPad
+    //             iPad: u.indexOf('iPad') > -1
+    //         };
+    //     }(),
+    //     // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
+    //     language : (navigator.browserLanguage || navigator.language).toLowerCase()
+    // }
+
+    // // 根据不同的终端，跳转到不同的地址
+    // var theUrl = '#';
+    // if(Terminal.platform.android){
+    //     // theUrl = 'http://api.axetime.com/apk/default/yicar.apk';
+    // }else if(Terminal.platform.iPhone){
+    //     theUrl = 'https://itunes.apple.com/cn/app/yi-ting-che/id708912075?l=cn&mt=8';
+    // }else if(Terminal.platform.iPad){
+    //     // 还可以通过language，区分开多国语言版
+    //     switch(Terminal.language){
+    //         case 'en-us':
+    //             theUrl = 'https://itunes.apple.com/cn/app/yi-ting-che/id708912075?l=cn&mt=8';
+    //             break;
+    //         default:
+    //             theUrl = 'https://itunes.apple.com/cn/app/yi-ting-che/id708912075?l=cn&mt=8';
+    //     }
+    // }
+
+    // window.location.href = theUrl;
+
+</script>
+</head>
+
+<body>
+
+    <div class="tip">如果按钮点击无效，请选择在浏览器中打开</div>
+    <div class="header"></div>
+    <div class="container">
+        <p>让有车生活更加精彩</p>
+        <div class="downloads clearfix">
+            <a class="down_iphone" href="http://mp.weixin.qq.com/mp/redirect?url=http://t.cn/zRO0SOQ">Appstore</a> 
+            <a class="down_android" href="http://apps.wandoujia.com/apps/com.xteam.yicar.ymap/download"> Android</a>
+        </div>
+    </div>
+    <div class="footer">©2013-<span id="year"></span> 斧头科技 - 浙ICP备13018822号</div>
+
+<script type="text/javascript">
+    // 版权信息自动填写当前年份
+    var getDate = new Date();
+    document.getElementById("year").innerHTML = getDate.getFullYear();
+</script>
+
+<!-- 统计代码 -->
+<div class="statistic"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253276229'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1253276229' type='text/javascript'%3E%3C/script%3E"));</script></div>
+<!-- 统计代码 -->
+
+</body>
+</html>

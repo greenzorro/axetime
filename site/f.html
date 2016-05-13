@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>室内找车</title>
+<style type="text/css">
+/* reset */
+* { margin:0; padding:0; }
+a img { border:none; }
+ol, ul { list-style:none; }
+button, input[type="submit"], input[type="button"], input[type="reset"] { cursor:pointer; }
+input[type=button], input[type=submit]{ -webkit-appearance:none; outline:none; }
+article,aside,dialog,footer,header,section,footer,nav,figure,menu { display:block; }
+table { width:100%; border-collapse:collapse; border-spacing:0; }
+a { text-decoration:none; outline:none; }
+body { line-height:1.6; }
+.clear { clear:both; display:block; height:0px; overflow:hidden; }
+.clearfix { zoom:1; }
+.clearfix:after { clear:both; display:block; height:0; content:"."; visibility:hidden; }
+
+/* layout */
+a { color: #2093ce; }
+body { background:#eee; font-family:'microsoft yahei','stheiti',sans-serif; font-size:1em; color:#333;
+    animation: movein_left .3s ease-in;
+    -webkit-animation: movein_left .3s ease-in;
+    -moz-animation: movein_left .3s ease-in;
+}
+input, textarea { font-family:'microsoft yahei','stheiti',sans-serif; }
+::selection { background:#2b97e8; color:#fff; }
+::-moz-selection { background:#2b97e8; color:#fff; }
+.icon { background: url(assets/images/findcar@2x.png) no-repeat center top; background-size: 260px; }
+
+/* page */
+.text { height: 120px; background: #22292c; text-align: center; color: #d0d7e3; }
+.text h1 { padding: 35px 0 0; font-size: 1em; font-weight: normal; }
+.text h1 span { color: #2093ce; }
+.text p { font-size: 1em; }
+.download { padding: 25px 0 50px; text-align: center; }
+.download .button { display: block; width: 250px; height: 44px; line-height: 44px; padding: 0 30px 0 0; margin: 0 auto 10px; background-repeat: no-repeat; border-radius: 5px; color: #fff; }
+.download .button i { float: left; display: block; width: 44px; height: 44px; margin: 0 0 0 10px; }
+.download .wechat { background-color: #2093ce; border-bottom: 2px solid #1b7fb2; }
+.download .wechat:active { background-color: #1988c1; border-color: #1988c1; }
+.download .wechat i { background-position: -0px -172px; }
+.download .down { background-color: #4e669a; border-bottom: 2px solid #364b77; }
+.download .down:active { background-color: #374f85; border-color: #374f85; }
+.download .down i { background-position: -44px -172px; }
+.download .pic { display: block; width: 260px; height: 172px; overflow: hidden; margin: 20px auto 0; position: relative; }
+.download .line { width: 164px; height: 42px; overflow: hidden; position: absolute; left: 45px; top: 86px;
+    animation: draw 3s ease-in-out infinite;
+    -webkit-animation: draw 3s ease-in-out infinite;
+    -moz-animation: draw 3s ease-in-out infinite;
+}
+.download .line span { display: block; width: 2px; height: 2px; background: #dd2241; border-radius: 2px; position: absolute; left: 0; top: 0; }
+.download .line .line_1 { width: 69px;
+	transform: matrix(0.9,-0.35,0,1,-2,12);
+	transform-origin:50% 50%;
+	-ms-transform: matrix(0.9,-0.35,0,1,-2,12); /* IE 9 */
+	-ms-transform-origin:50% 50%;
+	-webkit-transform: matrix(0.9,-0.35,0,1,-2,12); /* Safari and Chrome */
+	-webkit-transform-origin:50% 50%;
+	-moz-transform: matrix(0.9,-0.35,0,1,-2,12); /* Firefox */
+	-moz-transform-origin:50% 50%;
+}
+.download .line .line_2 { width: 110px;
+	transform: matrix(0.9,0.36,0,1,57,20);
+	transform-origin:50% 50%;
+	-ms-transform: matrix(0.9,0.36,0,1,57,20); /* IE 9 */
+	-ms-transform-origin:50% 50%;
+	-webkit-transform: matrix(0.9,0.36,0,1,57,20); /* Safari and Chrome */
+	-webkit-transform-origin:50% 50%;
+	-moz-transform: matrix(0.9,0.36,0,1,57,20); /* Firefox */
+	-moz-transform-origin:50% 50%;
+}
+
+/* animations */
+@keyframes movein_left {
+    0% { opacity:0; transform:translate(-30px,0px); }
+    100% { opacity:1; transform:translate(0px,0px); }
+}
+@-webkit-keyframes movein_left {
+    0% { opacity:0; -webkit-transform:translate(-30px,0px); }
+    100% { opacity:1; -webkit-transform:translate(0px,0px); }
+}
+@-moz-keyframes movein_left {
+    0% { opacity:0; -moz-transform:translate(-30px,0px); }
+    100% { opacity:1; -moz-transform:translate(0px,0px); }
+}
+@keyframes draw {
+    0% { width: 0px; opacity: 1; }
+    70% { width: 164px; opacity: 1; }
+    90% { width: 164px; opacity: 1; }
+    100% { width: 164px; opacity: 0; }
+}
+@-webkit-keyframes draw {
+    0% { width: 0px; opacity: 1; }
+    60% { width: 164px; opacity: 1; }
+    80% { width: 164px; opacity: 1; }
+    90% { width: 164px; opacity: 0; }
+    100% { width: 0px; opacity: 0; }
+}
+@-moz-keyframes draw {
+    0% { width: 0px; opacity: 1; }
+    70% { width: 164px; opacity: 1; }
+    90% { width: 164px; opacity: 1; }
+    100% { width: 164px; opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="text">
+    <h1>您当前位于 <span>东广场负3层 D通道-25</span></h1>
+	<p>杭州火车东站</p>
+</div>
+<div class="download">
+    <a class="wechat button" href="http://mp.weixin.qq.com/s?__biz=MjM5MDAxMzY5MA==&mid=200436644&idx=1&sn=aed00e04115587c63c1fb080bcc12bef#rd"><i class="icon"></i>关注微信公众号</a>
+    <a class="down button" href="http://www.axetime.com/download/ytc.html?id=8"><i class="icon"></i>下载易停车</a>
+	<p>用<a href="http://www.axetime.com/download/ytc.html?id=8"> 易停车 </a>扫码，还能查看找车路线哟~</p>
+	<a class="pic icon" href="http://www.axetime.com/download/ytc.html?id=8">
+		<div class="line">
+			<span class="line_1"></span>
+			<span class="line_2"></span>
+		</div>
+	</a>
+</div>
+
+</body>
+</html>

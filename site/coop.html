@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>合作 - 斧头科技</title>
+<link href="assets/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/fonts.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script src="assets/js/jquery-latest.js"></script>
+<script src="assets/js/functions.js"></script>
+<script>
+    //提交信息
+    function post_data() {
+/*         var token = "<?php echo csrf_token() ?>"; */
+        var identity = document.getElementById('identity').value;
+        var wannabe = document.getElementById('wannabe').value;
+        var area = document.getElementById('area').value;
+        var phone = document.getElementById('phone').value;
+        var detail = document.getElementById('detail').value;
+
+        $.ajax({
+            url: "cooperate",
+            type: "POST",
+            data: {identity: identity, wannabe: wannabe, area: area, phone: phone, detail: detail},
+            //dataType: "json",
+            error: function() {
+                alert('Error loading XML document');
+                submitError('提交失败，请稍后再试！');
+                
+            },
+            success: function(data, status) {//如果调用php成功    
+                submitSuccess('你的信息我们已经收到，会尽快联系您，谢谢！');
+            }
+        });
+//        return false;
+    }
+</script>
+
+</head>
+
+<body>
+
+	<!-- 页头 -->
+	<header class="header">
+		<div class="header_wrap clearfix">
+			<h1 class="logo"><a href="index.html"></a></h1>
+			<div class="menu"><a class="icon-icon_menu icon" href="javascript:;"></a></div>
+			<nav>
+				<a href="index.html">易停车</a>
+				<a class="current" href="coop.html">合作</a>
+				<a href="join.html">招聘</a>
+				<a href="about.html">关于</a>
+				<a href="http://weibo.com/yitingche" target="_blank">
+					<span class="icon-icon_weibo icon"></span>
+				</a>
+			</nav>
+		</div>
+	</header>
+	<!-- 页头 -->
+
+	<div class="cooperate container">
+
+		<!-- 首屏 -->
+		<div class="feature">
+			<div class="main_wrap clearfix">
+				<div class="intro">
+					<p>随着移动互联网的普及，物联网、大数据、云计算平台的进一步成熟，人们对于停车场的智能化要求进一步提高，而众多传统设备生产商又缺乏互联网研发实力。</p>
+					<p>针对此情况，“易停车”率先提出“技术共享”概念，拟逐步将停车场智能化功能以免费平台的形式开放给生产商和工程商，助力解决全社会停车难题。</p>
+					<p>智能化功能包括但不限于以下：停车诱导、反向寻车、手机支付、堵车挪车、紧急呼叫、停车后服务、云管理；将在1-2年内全部实现免费开放。</p>
+					<p>首先开放的“反向寻车”功能共有以下三种，A：二维码；B、蓝牙；C：视频；均可实现pc端、手机端查询路径、方向，部分可实现实时室内动态导航。</p>
+					<p>流程：确定意向—签订合同—正式合作</p>
+				</div>
+				<ul>
+					<li class="axetime clearfix">
+						<span></span>
+						<p>杭州斧头科技有限公司是一家移动互联网科技公司，利用移动互联网思维解决城市停车难问题，同时带动整体产业革命。</p>
+					</li>
+					<li class="etingche clearfix">
+						<span></span>
+						<p>易停车是国内首款颠覆性的移动互联网停车软件，主要提供停车信息、车位出租预订及其他相关智能化服务。</p>
+					</li>
+					<li class="coop clearfix">
+						<span></span>
+						<p>只要您有资源和热情，欢迎加入我们，一起开创智能停车新时代！梦想总要有的，一起来实现吧。</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 首屏 -->
+
+		<div class="main_wrap clearfix">
+
+			<!-- 商家入驻 -->
+			<div class="settled">
+				<h2>小伙伴入驻</h2>
+				<form name="form1" action="http://localhost/cooperate" method="post">
+					<div class="row clearfix">
+						<label>您的身份<span>*</span></label>
+						<div class="identity group clearfix">
+							<a href="javascript:;">停车场经营者</a>
+							<a href="javascript:;">停车设备商</a>
+							<a href="javascript:;">汽车后服务商</a>
+							<a href="javascript:;">媒体广告</a>
+							<a href="javascript:;">行业爱好者</a>
+							<a href="javascript:;">其他</a>
+							<input type="hidden" id="identity" name="identity">
+						</div>
+					</div>
+					<div class="row clearfix">
+						<label>您想成为<span>*</span></label>
+						<div class="wannabe group clearfix">
+							<a href="javascript:;">合作伙伴</a>
+							<a href="javascript:;">代理商</a>
+							<a href="javascript:;">情报员</a>
+							<a href="javascript:;">其他</a>
+							<input type="hidden" id = "wannabe" name="wannabe">
+						</div>
+					</div>
+					<div class="row clearfix">
+						<label>合作区域</label>
+
+						<div class="area group clearfix">
+							<input type="text" id="area" name="area" placeholder="杭州" maxlength="50">
+						</div>
+					</div>
+					<div class="row clearfix">
+						<label>联系方式<span>*</span></label>
+						<div class="phone group clearfix">
+							<input type="text" id="phone" name="phone" placeholder="15066668888" maxlength="30">
+
+						</div>
+					</div>
+					<div class="row clearfix">
+						<label>您的指导</label>
+
+						<div class="detail group clearfix">
+							<textarea name="detail" id="detail" maxlength="300"></textarea>
+
+						</div>
+					</div>
+					<p class="error"></p>
+					<div class="button">
+						<!--
+							onclick事件内容只是演示效果用
+							实际情况中，按钮触发点击事件后，执行cooperateSubmit()来判断必填项是否都填写了
+							如果返回true，则向服务器提交数据；返回false会有相应错误提示
+							提交成功执行submitSuccess('提交成功文案')，提交失败执行submitError('提交失败文案')
+						-->
+						<a class="submit" href="javascript:;" onclick="post_data();"><i></i><span>申请合作</span></a>
+						<p>我们期待在不久的将来，带给您更高的盈利和更快的发展！</p>
+					</div>
+				</form>
+			</div>
+			<!-- 商家入驻 -->
+
+			<!-- 联系我们 -->
+			<div class="contact">
+				<div class="text">
+					<h2>期待您与我们联系</h2>
+					<ul>
+						<li>
+							<span class="icon-icon_mail icon"></span>
+							<p>邮箱：cooperate@axetime.com</p>
+						</li>
+						<li>
+							<span class="icon-icon_phone icon"></span>
+							<p>电话：0571-28975125</p>
+						</li>
+						<li>
+							<span class="icon-icon_qq icon"></span>
+							<p>QQ：2716377227</p>
+						</li>
+						<li>
+							<span class="icon-icon_location icon"></span>
+							<p>地址：杭州市西湖区文二西路712号<br>西溪乐谷创意产业园2号楼2楼</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 联系我们 -->
+
+		</div>
+
+		<div class="clear"></div>
+	</div>
+
+	<!-- 页尾 -->
+	<footer class="footer">
+		<span class="icon-icon_axe icon"></span>
+		<nav>
+			<a href="http://www.axetime.com/index.html">易停车</a>
+			<a href="coop.html">合作</a>
+			<a href="http://www.axetime.com/join.html">招聘</a>
+			<a href="http://www.axetime.com/about.html">关于</a>
+		</nav>
+		<p>©2013-<span class="year"></span> 斧头科技 - 浙ICP备13018822号</p>
+	</footer>
+	<!-- 页尾 -->
+
+	<!-- 统计代码 -->
+	<div class="statistic"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253276229'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1253276229' type='text/javascript'%3E%3C/script%3E"));</script></div>
+	<!-- 统计代码 -->
+
+</body>
+</html>
